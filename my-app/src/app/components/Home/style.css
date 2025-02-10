@@ -1,0 +1,19 @@
+.aboutWrapper{
+    color: rgb(244, 242, 242);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-image: url('/iron_scrapp2.jpg');
+    background-size: cover;
+    background-position: bottom;
+    justify-content: center;
+    display: flex;
+}
+h1{
+    font-size: 84px;
+    font-weight: 500;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    line-height: 1;
+    padding-left: 48px;
+}
