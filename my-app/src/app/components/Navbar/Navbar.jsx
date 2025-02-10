@@ -15,7 +15,7 @@ function Navbar () {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 70) {
         setIsScrolled(true);  // Sayfa 50px'den fazla kaydırıldığında logo küçülecek
       } else {
         setIsScrolled(false);

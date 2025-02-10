@@ -1,0 +1,16 @@
+body {
+    position: relative;
+  }
+  
+  .sendButton {
+    border: 1px solid #002050;
+    padding: 10px;
+    border-radius: 24px;
+  }
+  
+  .sendButton:hover {
+    color: white;
+    background-color: #002050;
+    transform: scale(1.05);
+  }
+  

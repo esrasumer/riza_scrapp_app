@@ -25,4 +25,6 @@
 /* Logo kaydırılınca küçülmesi */
 .LogoContiner.shrink {
   width: 100px;
+  transition: width 0.2s ease-in-out; /* Yumuşak geçiş */
+
 }
