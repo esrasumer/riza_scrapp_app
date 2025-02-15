@@ -7,6 +7,11 @@
   background-color: white;
 }
 
+.navbarContainer.hidden{
+  top: -60px; /* Navbar kaybolacak */
+
+}
+
 /* Navbar düzeni */
 .navbarMenuWrapper {
   display: flex;
@@ -17,7 +22,6 @@
 
 /* Logo başlangıç boyutu */
 .LogoContiner {
-  width: 200px;  /* Başlangıç genişliği */
   height: auto;  /* Yükseklik orantılı kalır */
   transition: transform 0.3s ease; /* Geçiş için animasyon */
 }

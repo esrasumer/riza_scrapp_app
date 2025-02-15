@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useRef  } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 // import { RxHamburgerMenu } from 'react-icons/rx'
@@ -30,6 +30,33 @@ function Navbar () {
     };
   }, []);
 
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  const handleScroll = () => {
+    if (typeof window !== 'undefined') {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current) {
+        // Scroll down - hide navbar
+        setIsVisible(false);
+      } else {
+        // Scroll up - show navbar
+        setIsVisible(true);
+      }
+      lastScrollY.current = currentScrollY <= 0 ? 0 : currentScrollY; // Prevent negative scroll value
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
 
   const [nav, setNav] = useState(false)
@@ -41,7 +68,7 @@ function Navbar () {
   return (
     <header className='sectionWrapper'>
       <nav
-        className='navbarContainer'
+        className={`navbarContainer ${isVisible ? 'visible' : 'hidden'}`}
         role='navigation'
         aria-label='Main Navigation'
       >
@@ -51,7 +78,7 @@ function Navbar () {
             <Image
               src='/rıza_hurdacı.png'
               alt='rıza hurdacı Logo'
-              width={200}
+              width={100}
               height={100}
               className={`LogoContiner cursor-pointer ${isScrolled ? 'shrink' : ''}`}
               priority

@@ -1,0 +1,11 @@
+.projectWrapper{
+    color: rgb(244, 242, 242);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-image: url('/scrapp_slider_background2.webp');
+    background-size: cover;
+    background-position: bottom;
+    justify-content: center;
+    display: flex;
+}

@@ -1,0 +1,27 @@
+.aboutWrapperSection {
+  padding: 10rem 0 4rem;
+  transform: translateY(40px);
+  animation: yukariKayma 1s forwards;
+}
+
+@keyframes yukariKayma {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aboutWrapper {
+  font-size: clamp(5.2rem, 6vw, 7.4rem);
+  font-weight: 400;
+  margin-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aboutText {
+  margin-bottom: 5rem;
+  color: rgba(12, 12, 14, 0.5);
+  font-size: 1.4rem;
+}

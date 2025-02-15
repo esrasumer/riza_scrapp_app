@@ -1,6 +1,7 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
+import './style.css'
 
 // import swiper style
 import 'swiper/css';
@@ -18,7 +19,7 @@ const SwiperComponent = () => {
       navigation={true}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      className='w-[80%]'
+      className='w-[80%] projectWrapper'
       loop={true}
       modules={[Pagination, Navigation]}
       style={{

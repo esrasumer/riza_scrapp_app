@@ -1,19 +1,35 @@
-.aboutWrapper{
-    color: rgb(244, 242, 242);
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    background-image: url('/iron_scrapp2.jpg');
-    background-size: cover;
-    background-position: bottom;
-    justify-content: center;
-    display: flex;
+.HomeWrapper {
+  color: rgb(244, 242, 242);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-image: url('/iron_scrapp2.jpg');
+  background-size: cover;
+  background-position: bottom;
+  justify-content: center;
+  display: flex;
 }
-h1{
-    font-size: 84px;
-    font-weight: 500;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    line-height: 1;
-    padding-left: 48px;
+.textWrapper {
+  transform: translateY(40px);
+  opacity: 0;
+  animation: yukariKayma 1s forwards;
+}
+h1 {
+  font-size: 84px;
+  font-weight: 500;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  line-height: 1;
+  padding-left: 48px;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 200;
+  width: 72%;
+}
+@keyframes yukariKayma {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
