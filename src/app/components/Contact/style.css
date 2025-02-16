@@ -14,3 +14,62 @@ body {
     transform: scale(1.05);
   }
   
+  .text {
+    font-weight: lighter;
+    font-size: 24px;
+    text-align: center;
+    width: 90%;
+  }
+  
+  .container-botton {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .whatsapp-icon {
+    position: fixed;
+    z-index: 1000;
+    right: 8px;
+    bottom: 16px;
+    padding: 12px 20px;
+    border-radius: 40px;
+    color: white;
+    background-color: #041e4f;
+    font-weight: bold;
+  }
+  .linkWrapper {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .whatsapp {
+    color: #25d366;
+    font-size: 24px;
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      gap: 10px;
+    }
+    .text {
+      font-size: 16px;
+    }
+    .container-botton {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .text-callNumber {
+      opacity: 1;
+      font-size: 14px;
+    }
+  
+    .text-phoneNumber {
+      font-size: 14px;
+    }
+  
+    .whatsapp-icon {
+      padding: 8px 15px;
+    }
+  }
+  
