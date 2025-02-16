@@ -79,7 +79,7 @@ const Contact = () => {
         <meta name='author' content='Baş Altyapı İnşaat A.Ş.' />
         <link rel='canonical' href='https://example.com/#contact' />
       </Head>
-      <section id='contact' className='w-full lg:h-screen'>
+    <section id='contact'>    {/* className= 'lg:h-screen' */}
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
           <div className='textHead'>BİZE ULAŞIN</div>
           <div className='grid lg:grid-cols-5 gap-8'>
