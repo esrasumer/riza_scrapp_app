@@ -1,11 +1,26 @@
+.esra{
+    box-sizing: border-box;
+    background-image: url('/scrapp_background2.webp');
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 .projectWrapper{
     color: rgb(244, 242, 242);
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
-    background-image: url('/scrapp_slider_background2.webp');
-    background-size: cover;
-    background-position: bottom;
     justify-content: center;
     display: flex;
+    align-items: center;
 }
+.swiper-wrapper {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .sümer{
+    background-color: white;
+    padding: 20px;
+  }

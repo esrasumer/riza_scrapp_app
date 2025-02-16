@@ -8,12 +8,12 @@ import SwiperComponent from './components/Projects/SwiperComponent'
 export default function Home () {
   return (
     <div>
-          <Navbar /> 
-           <HomePage />
-          <About />
-          <SwiperComponent />
-          <Contact />
-          <Footer /> 
+      <Navbar />
+      <HomePage />
+      <About />
+      <SwiperComponent />
+      <Contact />
+      <Footer />
     </div>
   )
 }

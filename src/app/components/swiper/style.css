@@ -1,0 +1,96 @@
+.slider-container {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* Swiper Genel Ayarlar */
+.swiper {
+  user-select: none;
+}
+
+.slide-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 650px;
+}
+
+/* Slider İçeriği */
+.slide-content {
+  background: #1e222a;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Resim Alanı */
+.slide-image {
+  display: block;
+  height: 244px;
+  overflow: hidden;
+  transition: height 0.6s ease-out;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease-out;
+}
+
+.slide-text {
+  margin-top: 15px;
+  font-size: 18px;
+  color: white;
+}
+
+/* Slider Navigasyon */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Slider Pagination */
+.swiper-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.2;
+  transition: opacity 0.3s, width 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px;
+  opacity: 1;
+}
