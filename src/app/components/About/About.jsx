@@ -1,10 +1,17 @@
+"use client";
 import React from 'react'
 import './style.css'
+import { motion } from "framer-motion";
 
 function About () {
   return (
-    <div className='section'>
-      <div className='aboutWrapperSection'>
+    <div className="aboutWrapperSection">
+      <motion.div
+        initial={{ opacity: 0, y: 70 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <h2 className='pt-8 text-lg aboutWrapper'>Hakkımızda</h2>
         <p className='aboutText'>
           Rıza Hurda olarak, hurdacılık sektöründe güvenilir ve profesyonel
@@ -25,8 +32,9 @@ function About () {
           geçin.Rıza Hurda olarak, sizlere profesyonel ve güvenilir hizmet
           sunmaktan memnuniyet duyarız.
         </p>
+        </motion.div>
+
       </div>
-    </div>
   )
 }
 

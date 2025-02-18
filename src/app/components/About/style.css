@@ -1,15 +1,15 @@
 .aboutWrapperSection {
-  padding: 10rem 0 4rem;
-  transform: translateY(40px);
-  animation: yukariKayma 1s forwards;
+  padding: 10rem 2.5rem 4rem; /*üstten 10rem, altından 4rem boşluk bırak */
+  /* transform: translateY(40px); */
+  /* animation: yukariKayma 1s forwards; */
 }
-
+/* 
 @keyframes yukariKayma {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
 .aboutWrapper {
   font-size: clamp(5.2rem, 6vw, 7.4rem);

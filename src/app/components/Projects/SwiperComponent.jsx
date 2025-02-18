@@ -3,43 +3,44 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 import 'swiper/css'
+import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-import { Pagination, Navigation } from 'swiper/modules'
+import { EffectCoverflow, Pagination } from 'swiper/modules'
 import './style.css'
 
 const images = [
   '/scrapp_image/iron_scrapp.jpg',
   '/scrapp_image/iron_scrapp2.jpg',
   '/scrapp_image/iron_scrapp3.jpg',
-  '/scrapp_image/iron_scrapp4.jpg',
+  '/scrapp_image/iron_scrapp8.jpg',
   '/scrapp_image/iron_scrapp5.jpg'
 ]
 
 const SwiperComponent = () => (
-  <div className='esra'>
+  <div className='swiper-container'>
     <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      loop
-      modules={[Pagination, Navigation]}
-      className='w-[80%] projectWrapper'
-      style={{
-        '--swiper-navigation-color': '#ffffff',
-        '--swiper-pagination-color': '#ffffff',
-        '--swiper-pagination-bottom': '0px'
+      effect="coverflow"
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView="auto"
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        modifier: 1,
+        slideShadows: true
       }}
+      pagination={{ clickable: true }}
+      loop
+      modules={[EffectCoverflow, Pagination]}
+      className='mySwiper'
     >
       {images.map((src, index) => (
-        <SwiperSlide key={index} className='sümer'>
+        <SwiperSlide key={index} className='swiper-slide'>
           <div className='image-wrapper'>
             <Image
               src={src}
               width={300}
-              height={200}
+              height={300}
               layout='responsive'
               alt={`Scrap Image ${index + 1}`}
             />
