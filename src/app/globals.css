@@ -43,3 +43,21 @@ body {
   padding: 0 5vw;
   /* text-align: center; */
 }
+
+/* Responsive scroll width ayarları */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 100vw;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Mobil cihazlar için scroll ayarları */
+@media screen and (max-width: 768px) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
