@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 
 function About () {
   return (
-    <div className="aboutWrapperSection">
+    <div 
+     id='about'
+    className="aboutWrapperSection">
       <motion.div
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}

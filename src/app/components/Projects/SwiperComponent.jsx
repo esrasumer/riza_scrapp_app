@@ -17,12 +17,12 @@ const images = [
 ]
 
 const SwiperComponent = () => (
-  <div className='swiper-container'>
+  <div id='projects' className='swiper-container'>
     <Swiper
-      effect="coverflow"
+      effect='coverflow'
       grabCursor={true}
       centeredSlides={true}
-      slidesPerView="auto"
+      slidesPerView='auto'
       coverflowEffect={{
         rotate: 50,
         stretch: 0,
