@@ -9,11 +9,12 @@ import { EffectCoverflow, Pagination } from 'swiper/modules'
 import './style.css'
 
 const images = [
-  '/scrapp_image/iron_scrapp.jpg',
-  '/scrapp_image/iron_scrapp2.jpg',
-  '/scrapp_image/iron_scrapp3.jpg',
-  '/scrapp_image/iron_scrapp8.jpg',
-  '/scrapp_image/iron_scrapp5.jpg'
+  '/scrapp_app_image/iron_scrapp1.jpg',
+  '/scrapp_app_image/iron_scrapp2.jpg',
+  '/scrapp_app_image/iron_scrapp3.jpg',
+  '/scrapp_app_image/iron_scrapp4.jpg',
+  '/scrapp_app_image/iron_scrapp5.jpg',
+  '/scrapp_app_image/iron_scrapp6.jpg',
 ]
 
 const SwiperComponent = () => (

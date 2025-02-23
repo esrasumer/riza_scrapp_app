@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="flex mt-8 flex-col md:flex-row md:justify-between">
                 <p className="w-full md:w-2/3 text-gray-400">Hurda geri dönüşümü ile doğayı koruyun, kazancınızı artırın! </p>
                 <div className="w-44 pt-6 md:pt-0">
-                    <a className="bg-red-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">İletişim</a>
+                    <a className="bg-primary justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">İletişim</a>
                 </div>
             </div>
             <div className="flex flex-col">
@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                     <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Hakkımızda</a>
                     <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Hizmetler</a>
-                    <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Nedden Biz?</a>
+                    <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Neden Biz?</a>
                     <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">İletişim</a>
                     <div className="flex flex-row space-x-8 items-center justify-between">
                         <a>

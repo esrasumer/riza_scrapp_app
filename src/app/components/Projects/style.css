@@ -5,3 +5,7 @@
   .swiper-slide {
     width: auto !important;
   }
+  .image-wrapper {
+    max-height: 540px; /* istediğiniz yüksekliği belirleyebilirsiniz */
+    overflow: hidden;
+  }
