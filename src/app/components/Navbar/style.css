@@ -32,3 +32,34 @@
   transition: width 0.2s ease-in-out; /* Yumuşak geçiş */
 
 }
+
+.menuLogo {
+  display: none;
+  margin-left: auto;
+  color: #041e4f;
+  width: 80px;
+  height: 32px;
+}
+
+.closeIcon {
+  padding: 8px 11px;
+}
+@media (max-width: 767px) {
+  .navbarContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+  .navbarMenuWrapper{
+    padding: 0px 4px;
+  }
+  .LogoContiner {
+    width: 128px;
+  }
+  .menuLogo {
+    display: block;
+  }
+  .menuLogo svg {
+    width: 4em; 
+    height: 2em;
+  }
+}

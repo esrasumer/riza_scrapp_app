@@ -4,10 +4,12 @@ import React, { useState,useEffect,useRef  } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 // import { RxHamburgerMenu } from 'react-icons/rx'
-// import { CloseOutlined } from '@ant-design/icons'
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons'
 import NavbarMenu from './NavbarMenu'
 import './style.css'
 import { NAVBAR_LINKS } from './contants.js'
+
+
 
 function Navbar () {
   
@@ -86,15 +88,16 @@ function Navbar () {
           </Link>
 
           {/* Hamburger Menu */}
-          {/* <div
+          <div
             className='menuLogo'
             onClick={handleNav}
             aria-label='Toggle navigation menu'
             role='button'
             tabIndex={0}
           >
-            <RxHamburgerMenu size={25} />
-          </div> */}
+            {/* <RxHamburgerMenu size={25} /> */}
+            <MenuOutlined size={25}/>
+          </div>
 
           {/* Desktop Menu */}
           <NavbarMenu />
@@ -105,7 +108,7 @@ function Navbar () {
       <div
         className={`${
           nav
-            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-slate-50 dark:bg-slate-800 p-10 z-[1000]'
+            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-full bg-slate-50 dark:bg-slate-800 dark:text-white p-10 z-[1000]'
             : 'fixed left-[-100%] top-0 p-10 bg-slate-50 dark:bg-slate-800'
         }`}
         role='dialog'
@@ -116,10 +119,10 @@ function Navbar () {
           {/* Close Button */}
           <button
             onClick={handleNav}
-            className='closeIcon rounded-full shadow-lg ml-auto shadow-gray-400 p-3 cursor-pointer text-black '
+            className='closeIcon rounded-full shadow-lg ml-auto shadow-gray-400 p-3 cursor-pointer text-black dark:bg-white'
             aria-label='Close navigation menu'
           >
-            {/* <CloseOutlined /> */}
+            <CloseOutlined />
           </button>
         </div>
 
@@ -132,7 +135,7 @@ function Navbar () {
               <li
                 key={link.href}
                 onClick={() => setNav(false)}
-                className='py-4 text-sm text-black '
+                className='py-4 text-sm text-black dark:text-white'
               >
                 <Link href={link.href}>
                   <div aria-label={`Navigate to ${link.label}`}>
