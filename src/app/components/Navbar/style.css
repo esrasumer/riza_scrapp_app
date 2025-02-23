@@ -37,8 +37,6 @@
   display: none;
   margin-left: auto;
   color: #041e4f;
-  width: 80px;
-  height: 32px;
 }
 
 .closeIcon {
@@ -50,7 +48,7 @@
     max-width: 100%;
   }
   .navbarMenuWrapper{
-    padding: 0px 4px;
+    padding: 0px 8px;
   }
   .LogoContiner {
     width: 128px;
@@ -59,7 +57,7 @@
     display: block;
   }
   .menuLogo svg {
-    width: 4em; 
+    width: 1.5em; 
     height: 2em;
   }
 }
