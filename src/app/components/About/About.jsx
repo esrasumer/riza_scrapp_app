@@ -1,13 +1,28 @@
-"use client";
+'use client'
+
+import Head from 'next/head'
 import React from 'react'
 import './style.css'
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
 function About () {
   return (
-    <div 
-     id='about'
-    className="aboutWrapperSection">
+    <>
+      <Head>
+        <title>
+          İstanbul Hurdacı - Rıza Hurda | Hurda Fiyatları ve Geri Dönüşüm
+        </title>
+        <meta
+          name='description'
+          content="İstanbul Hurdacı Rıza Hurda olarak hurda demir, bakır, alüminyum, kablo ve maden hurda fiyatları ile en yakın hurdacı hizmetini sunuyoruz. Tekirdağ ve Çorlu'da profesyonel hurdacılık."
+        />
+        <meta
+          name='keywords'
+          content='İstanbul Hurdacı, En Yakın Hurdacı, Hurdacı, Hurda Demir, Bakır Hurdacı, Hurda Fiyatları, Tekirdağ Hurdacı, Maden hurda fiyatları, Çorlu Hurda, Kablo hurda, E. kart hurdaları, alüminyum hurda'
+        />
+        <meta name='robots' content='index, follow' />
+      </Head>
+      <div id='about' className='aboutWrapperSection'>
       <motion.div
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -34,9 +49,9 @@ function About () {
           geçin.Rıza Hurda olarak, sizlere profesyonel ve güvenilir hizmet
           sunmaktan memnuniyet duyarız.
         </p>
-        </motion.div>
-
-      </div>
+      </motion.div>
+    </div>
+    </>
   )
 }
 

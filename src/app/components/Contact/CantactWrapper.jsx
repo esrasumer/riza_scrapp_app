@@ -8,7 +8,7 @@ export default function HomePage () {
         <div className='whatsapp-icon'>
           <a
             className='linkWrapper'
-            href=' https://wa.me/905386297623'
+            href=' https://wa.me/905370261190'
             target='blank'
             rel='noopener noreferrer'
             aria-label='WhatsApp üzerinden bizimle iletişime geçin'

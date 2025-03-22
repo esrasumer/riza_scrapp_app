@@ -1,85 +1,62 @@
-'use client'
+'use client';
 
-import React, { useState,useEffect,useRef  } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-// import { RxHamburgerMenu } from 'react-icons/rx'
-import { CloseOutlined, MenuOutlined } from '@ant-design/icons'
-import NavbarMenu from './NavbarMenu'
-import './style.css'
-import { NAVBAR_LINKS } from './contants.js'
+import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
+import './style.css';
 
+// Örnek NAVBAR_LINKS (contants.js'den geldiğini varsayıyorum)
+const NAVBAR_LINKS = [
+  { href: '/', label: 'Ana Sayfa' },
+  { href: '/hurdalar', label: 'İstanbul Hurdacı' },
+  { href: '/hurda-fiyatlari', label: 'Hurda Fiyatları' },
+  { href: '/hurdalar/demir', label: 'Hurda Demir' },
+  { href: '/hurdalar/bakir', label: 'Bakır Hurdacı' },
+  { href: '/iletisim', label: 'En Yakın Hurdacı' },
+];
 
-
-function Navbar () {
-  
+function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 70) {
-        setIsScrolled(true);  // Sayfa 50px'den fazla kaydırıldığında logo küçülecek
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   const [isVisible, setIsVisible] = useState(true);
+  const [nav, setNav] = useState(false);
   const lastScrollY = useRef(0);
 
-  const handleScroll = () => {
-    if (typeof window !== 'undefined') {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY.current) {
-        // Scroll down - hide navbar
-        setIsVisible(false);
-      } else {
-        // Scroll up - show navbar
-        setIsVisible(true);
-      }
-      lastScrollY.current = currentScrollY <= 0 ? 0 : currentScrollY; // Prevent negative scroll value
-    }
-  };
-
+  // Logo küçültme için scroll efekti
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 70);
     };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Navbar gizleme/gösterme için scroll efekti
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsVisible(currentScrollY <= lastScrollY.current || currentScrollY <= 0);
+      lastScrollY.current = Math.max(currentScrollY, 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-
-  const [nav, setNav] = useState(false)
-
-  const handleNav = () => {
-    setNav(!nav)
-  }
+  const handleNav = () => setNav(!nav);
 
   return (
-    <header className='sectionWrapper'>
+    <header className="sectionWrapper">
       <nav
         className={`navbarContainer ${isVisible ? 'visible' : 'hidden'}`}
-        role='navigation'
-        aria-label='Main Navigation'
+        role="navigation"
+        aria-label="Ana Menü"
       >
-        <div className='navbarMenuWrapper'>
+        <div className="navbarMenuWrapper">
           {/* Logo */}
-          <Link href='/' aria-label='Navigate to Home'>
+          <Link href="/" aria-label="Rıza Hurdacı Ana Sayfasına Git">
             <Image
-              src='/rıza_hurdacı.png'
-              alt='rıza hurdacı Logo'
+              src="/rıza_hurdacı.png"
+              alt="Rıza Hurdacı İstanbul Logo"
               width={100}
               height={100}
               className={`LogoContiner cursor-pointer ${isScrolled ? 'shrink' : ''}`}
@@ -87,68 +64,66 @@ function Navbar () {
             />
           </Link>
 
-          {/* Hamburger Menu */}
-          <div
-            className='menuLogo'
-            onClick={handleNav}
-            aria-label='Toggle navigation menu'
-            role='button'
-            tabIndex={0}
-          >
-            {/* <RxHamburgerMenu size={25} /> */}
-            <MenuOutlined size={25}/>
-          </div>
-
-          {/* Desktop Menu */}
-          <NavbarMenu />
-        </div>
-      </nav>
-
-      {/* Mobile Menu */}
-      <div
-        className={`${
-          nav
-            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-full bg-slate-50 dark:bg-slate-800 dark:text-white p-10 z-[1000]'
-            : 'fixed left-[-100%] top-0 p-10 bg-slate-50 dark:bg-slate-800'
-        }`}
-        role='dialog'
-        aria-modal='true'
-        aria-labelledby='mobile-menu-title'
-      >
-        <div className='flex w-full items-center pt-3'>
-          {/* Close Button */}
+          {/* Hamburger Menü */}
           <button
+            className="menuLogo"
             onClick={handleNav}
-            className='closeIcon rounded-full shadow-lg ml-auto shadow-gray-400 p-3 cursor-pointer text-black dark:bg-white'
-            aria-label='Close navigation menu'
+            aria-label="Mobil navigasyon menüsünü aç"
+            aria-expanded={nav}
+            aria-controls="mobile-menu"
           >
-            <CloseOutlined />
+            <MenuOutlined size={25} />
           </button>
-        </div>
 
-        <div className='py-4 flex flex-col'>
-          <h2 id='mobile-menu-title' className='sr-only'>
-            Mobile Navigation Menu
-          </h2>
-          <ul className='uppercase'>
-            {NAVBAR_LINKS.map(link => (
-              <li
-                key={link.href}
-                onClick={() => setNav(false)}
-                className='py-4 text-sm text-black dark:text-white'
-              >
-                <Link href={link.href}>
-                  <div aria-label={`Navigate to ${link.label}`}>
-                    {link.label}
-                  </div>
+          {/* Masaüstü Menü */}
+          <ul className="desktopMenu hidden md:flex space-x-6">
+            {NAVBAR_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} aria-label={`${link.label} sayfasına git`}>
+                  {link.label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
+      </nav>
+
+      {/* Mobil Menü */}
+      <div
+        id="mobile-menu"
+        className={`fixed top-0 h-full w-[75%] sm:w-[60%] md:w-[45%] bg-slate-50 dark:bg-slate-800 dark:text-white p-10 z-[1000] transition-all duration-300 ${
+          nav ? 'left-0' : 'left-[-100%]'
+        }`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobil Navigasyon Menüsü"
+      >
+        <div className="flex w-full items-center pt-3">
+          <button
+            onClick={handleNav}
+            className="closeIcon rounded-full shadow-lg ml-auto shadow-gray-400 p-3 cursor-pointer text-black dark:bg-white"
+            aria-label="Mobil navigasyon menüsünü kapat"
+          >
+            <CloseOutlined />
+          </button>
+        </div>
+
+        <ul className="py-4 flex flex-col uppercase">
+          {NAVBAR_LINKS.map((link) => (
+            <li
+              key={link.href}
+              onClick={() => setNav(false)}
+              className="py-4 text-sm text-black dark:text-white"
+            >
+              <Link href={link.href} aria-label={`${link.label} sayfasına git`}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
