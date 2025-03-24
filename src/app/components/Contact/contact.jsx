@@ -186,7 +186,7 @@ const Contact = () => {
                   </div>
                   <button
                     type='submit'
-                    className='w-full p-4 text-white bg-blue-600 rounded-lg mt-4 hover:bg-blue-700'
+                    className='w-full p-4 text-white bg-secondary rounded-lg mt-4 hover:bg-muted'
                   >
                     GÖNDER
                   </button>

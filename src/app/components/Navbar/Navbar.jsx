@@ -5,16 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import './style.css';
-
-// Örnek NAVBAR_LINKS (contants.js'den geldiğini varsayıyorum)
-const NAVBAR_LINKS = [
-  { href: '/', label: 'Ana Sayfa' },
-  { href: '/hurdalar', label: 'İstanbul Hurdacı' },
-  { href: '/hurda-fiyatlari', label: 'Hurda Fiyatları' },
-  { href: '/hurdalar/demir', label: 'Hurda Demir' },
-  { href: '/hurdalar/bakir', label: 'Bakır Hurdacı' },
-  { href: '/iletisim', label: 'En Yakın Hurdacı' },
-];
+import { NAVBAR_LINKS } from './contants';
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

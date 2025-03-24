@@ -6,6 +6,7 @@ import ContactWrapper from './components/Contact/CantactWrapper'
 import Footer from './components/Footer/footer'
 import Navbar from './components/Navbar/Navbar'
 import SwiperComponent from './components/Projects/SwiperComponent'
+import Services from './components/Services'
 
 export default function Home () {
   return (
@@ -60,6 +61,7 @@ export default function Home () {
       <div>
         <Navbar />
         <HomePage />
+        <Services />
         <ContactWrapper />
         <About />
         <SwiperComponent />

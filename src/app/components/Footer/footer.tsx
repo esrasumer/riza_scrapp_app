@@ -3,6 +3,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import './style.css'
+import Link from 'next/link'
 
 const Footer = () => {
   const [text, setText] = useState('İletişim')
@@ -32,7 +33,7 @@ const Footer = () => {
       </Head>
 
       <footer>
-        <div className='w-full min-h-screen flex items-center justify-center bg-black'>
+        <div className='w-full min-h-screen flex items-center justify-center bg-secondary'>
           <div className='md:w-2/3 w-full px-4 text-white flex flex-col'>
             <div className='w-full text-7xl font-bold'>
               <h1 className='w-full md:w-2/3'>
@@ -44,8 +45,8 @@ const Footer = () => {
                 Hurda geri dönüşümü ile doğayı koruyun, kazancınızı artırın!{' '}
               </p>
               <div className='w-44 pt-6 md:pt-0'>
-                <a
-                className='button'
+                <Link
+                  className='button'
                   href='/#contact'
                   onMouseEnter={() => setText('+90 537 026 11 90')}
                   onMouseLeave={() => setText('İletişim')}
@@ -53,7 +54,7 @@ const Footer = () => {
                   {text}
                   <div className='button__horizontal'></div>
                   <div className='button__vertical'></div>
-                </a>
+                </Link>
               </div>
             </div>
             <div className='flex flex-col'>
@@ -67,7 +68,7 @@ const Footer = () => {
                     height='100'
                     preserveAspectRatio='xMidYMid meet'
                     version='1.0'
-                    aria-label='Rıza Hurdacı Logosu'
+                    arial-label='Rıza Hurdacı Logo'
                   >
                     <defs>
                       <g />
@@ -190,45 +191,45 @@ const Footer = () => {
                     </g>
                   </svg>
                 </div>
-                <a
+                <Link
                   href='/#about'
                   aria-label='Hakkımızda sayfasına git'
-                  className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'
+                  className='hidden md:block cursor-pointer text-accent hover:text-white uppercase'
                 >
                   Hakkımızda
-                </a>
-                <a
+                </Link>
+                <Link
                   href='/#services'
                   aria-label='Hurdalar ve Hizmetler sayfasına git'
-                  className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'
+                  className='hidden md:block cursor-pointer text-accent hover:text-white uppercase'
                 >
                   Hizmetler
-                </a>
-                <a
-                  href='/hurda-fiyatları'
+                </Link>
+                <Link
+                  href='/#contact'
                   aria-label='Hurda Fiyatları sayfasına git'
-                  className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'
+                  className='hidden md:block cursor-pointer text-accent hover:text-white uppercase'
                 >
-                  Neden Biz?
-                </a>
-                <a
+                  Biz Neredeyiz?
+                </Link>
+                <Link
                   href='/#contact'
                   aria-label='İletişim sayfasına git'
-                  className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'
+                  className='hidden md:block cursor-pointer text-accent hover:text-white uppercase'
                 >
                   İletişim
-                </a>
+                </Link>
               </div>
               <hr className='border-gray-600' />
-              <p className='w-full text-center text-gray-600'>
+              <p className='w-full text-center text-accent'>
                 Copyright © 2025
-                <a
+                <Link
                   href='https://www.linkedin.com/in/esra-sumer/'
                   aria-label='Sümer.dev sitesine git'
                 >
                   {' '}
                   sümer.dev
-                </a>
+                </Link>
               </p>
             </div>
           </div>
