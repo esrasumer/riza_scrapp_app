@@ -42,7 +42,7 @@ const SwiperComponent = () => (
         content="İstanbul'daki en iyi hurdacıların sunduğu hurda demir, bakır, alüminyum ve diğer hurdaların görsellerini projeler sayfasında bulabilirsiniz."
       />
       <meta property='og:type' content='website' />
-      <meta property='og:url' content='https://rizahurdaci.com/projects' />
+      <meta property='og:url' content='https://Arashurdaci.com/projects' />
       <meta
         property='og:image'
         content='https://istanbulhurdaci.com/scrapp_app_image/iron_scrapp1.jpg' // Her bir görseli kullanabilirsiniz.

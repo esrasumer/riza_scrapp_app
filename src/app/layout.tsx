@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rıza Hurdacı | Hurda Alım Satım",
+  title: "Aras Hurdacı | Hurda Alım Satım",
   description: "İstanbul ve çevresinde hurda alım satım hizmeti. Hurda demir, bakır, alüminyum ve daha fazlası için en iyi fiyatlar.",
   keywords: "İstanbul Hurdacı, En Yakın Hurdacı, Hurdacı, Hurda Demir, Bakır Hurdacı, Hurda Fiyatları, Tekirdağ Hurdacı, Maden hurda fiyatları, Çorlu Hurda, Kablo hurda, E. kart hurdaları, Alüminyum hurda",
 };

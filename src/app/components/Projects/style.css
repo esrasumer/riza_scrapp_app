@@ -6,6 +6,6 @@
     width: auto;
   }
   .image-wrapper {
-    max-height: 540px; /* istediğiniz yüksekliği belirleyebilirsiniz */
+    max-height: 540px; 
     overflow: hidden;
   }

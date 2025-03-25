@@ -15,7 +15,7 @@ export default function Home () {
       <title>İstanbul Hurdacı | En Yakın Hurdacı | Hurda Fiyatları</title>
         <meta
           name='description'
-          content='Rıza Hurdacı olarak İstanbul ve çevresinde en kaliteli hurdacı hizmetini sunuyoruz. Hurda demir, bakır, alüminyum, kablo hurdası ve elektronik kart hurdaları alımı yapıyoruz.'
+          content='Aras Hurdacı olarak İstanbul ve çevresinde en kaliteli hurdacı hizmetini sunuyoruz. Hurda demir, bakır, alüminyum, kablo hurdası ve elektronik kart hurdaları alımı yapıyoruz.'
         />
         <meta
           name='keywords'
@@ -24,32 +24,32 @@ export default function Home () {
         <meta name='robots' content='index, follow' />
         <meta
           property='og:title'
-          content='Rıza Hurdacı | Hurda Alım & Satım'
+          content='Aras Hurdacı | Hurda Alım & Satım'
         />
         <meta
           property='og:description'
           content="İstanbul'da hurdacılık hizmeti. En iyi fiyatlarla hurda alımı yapıyoruz. En yakın hurdacı hizmeti için bize ulaşın."
         />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://rizahurdaci.com' />{' '}
+        <meta property='og:url' content='https://Arashurdaci.com' />{' '}
         {/* güncellenicek */}
         <meta
           property='og:image'
-          content='https://rizahurdaci.com/hurda-image.jpg' //güncellenicek
+          content='https://Arashurdaci.com/hurda-image.jpg' //güncellenicek
         />
         <script type='application/ld+json'>
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ScrapYard',
-            name: 'Rıza Hurdacı',
+            name: 'Aras Hurdacı',
             description:
-              'Rıza Hurdacı olarak İstanbul ve çevresinde hurda alım satım hizmeti sunuyoruz. En iyi fiyatlarla hurda demir, bakır, alüminyum, kablo hurdası ve elektronik kart hurdaları alıyoruz.',
+              'Aras Hurdacı olarak İstanbul ve çevresinde hurda alım satım hizmeti sunuyoruz. En iyi fiyatlarla hurda demir, bakır, alüminyum, kablo hurdası ve elektronik kart hurdaları alıyoruz.',
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'İstanbul',
               addressCountry: 'TR'
             },
-            url: 'https://rizahurdaci.com', // güncellenicek
+            url: 'https://Arashurdaci.com', // güncellenicek
             contactPoint: {
               '@type': 'ContactPoint',
               telephone: '+90537 026 1190',

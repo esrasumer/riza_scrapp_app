@@ -135,7 +135,7 @@ const Contact = () => {
                     </div>
                     <div className='flex flex-col'>
                       <label htmlFor='phoneNumber' className='text-sm py-2'>
-                        TELEFON NUMARASI
+                        TELEFON NUMArasI
                       </label>
                       <input
                         className='border-2 rounded-lg p-3 flex border-gray-300'
@@ -144,7 +144,7 @@ const Contact = () => {
                         id='phoneNumber'
                         value={formData.phoneNumber}
                         onChange={handleChange}
-                        title='Lütfen telefon numarası girin'
+                        title='Lütfen telefon numArası girin'
                         pattern='^\d{10,15}$'
                         required
                       />

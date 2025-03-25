@@ -44,10 +44,10 @@ function Navbar() {
       >
         <div className="navbarMenuWrapper">
           {/* Logo */}
-          <Link href="/" aria-label="Rıza Hurdacı Ana Sayfasına Git">
+          <Link href="/" aria-label="Aras Hurdacı Ana Sayfasına Git">
             <Image
-              src="/rıza_hurdacı.png"
-              alt="Rıza Hurdacı İstanbul Logo"
+              src="/aras-hurda-logo.png"
+              alt="Aras Hurdacı İstanbul Logo"
               width={100}
               height={100}
               className={`LogoContiner cursor-pointer ${isScrolled ? 'shrink' : ''}`}

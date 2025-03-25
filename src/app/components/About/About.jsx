@@ -10,11 +10,11 @@ function About () {
     <>
       <Head>
         <title>
-          İstanbul Hurdacı - Rıza Hurda | Hurda Fiyatları ve Geri Dönüşüm
+          İstanbul Hurdacı - Aras Hurda | Hurda Fiyatları ve Geri Dönüşüm
         </title>
         <meta
           name='description'
-          content="İstanbul Hurdacı Rıza Hurda olarak hurda demir, bakır, alüminyum, kablo ve maden hurda fiyatları ile en yakın hurdacı hizmetini sunuyoruz. Tekirdağ ve Çorlu'da profesyonel hurdacılık."
+          content="İstanbul Hurdacı Aras Hurda olarak hurda demir, bakır, alüminyum, kablo ve maden hurda fiyatları ile en yakın hurdacı hizmetini sunuyoruz. Tekirdağ ve Çorlu'da profesyonel hurdacılık."
         />
         <meta
           name='keywords'
@@ -31,7 +31,7 @@ function About () {
       >
         <h2 className='pt-8 text-lg aboutWrapper'>Hakkımızda</h2>
         <p className='aboutText'>
-          Rıza Hurda olarak, hurdacılık sektöründe güvenilir ve profesyonel
+          Aras Hurda olarak, hurdacılık sektöründe güvenilir ve profesyonel
           hizmet sunarak, geri dönüşüm sürecine katkıda bulunuyoruz. Hurda
           alım-satım süreçlerinde şeffaf ve müşteri odaklı yaklaşımımızla,
           sektördeki en iyi fiyatlandırma ve hizmet kalitesini sağlamayı
@@ -46,7 +46,7 @@ function About () {
           alıyor, değerinde fiyatlandırma yaparak hızlı ve güvenli bir şekilde
           ödeme gerçekleştiriyoruz. Geri dönüşüme katkıda bulunmak ve
           hurdalarınızı en iyi fiyatlarla değerlendirmek için bizimle iletişime
-          geçin.Rıza Hurda olarak, sizlere profesyonel ve güvenilir hizmet
+          geçin.Aras Hurda olarak, sizlere profesyonel ve güvenilir hizmet
           sunmaktan memnuniyet duyarız.
         </p>
       </motion.div>

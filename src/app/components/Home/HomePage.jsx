@@ -7,11 +7,11 @@ function HomePage () {
     <>
       <Head>
         <title>
-          İstanbul Hurdacı - Rıza Hurda | Hurdacı ve Hurda Fiyatları
+          İstanbul Hurdacı - Aras Hurda | Hurdacı ve Hurda Fiyatları
         </title>
         <meta
           name='description'
-          content="İstanbul Hurdacı Rıza Hurda ile hurda demir, bakır, alüminyum, kablo hurda ve daha fazlasını en iyi hurda fiyatları ile değerlendirin. En yakın hurdacı Tekirdağ ve Çorlu'da!"
+          content="İstanbul Hurdacı Aras Hurda ile hurda demir, bakır, alüminyum, kablo hurda ve daha fazlasını en iyi hurda fiyatları ile değerlendirin. En yakın hurdacı Tekirdağ ve Çorlu'da!"
         />
         <meta
           name='keywords'
