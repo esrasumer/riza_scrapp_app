@@ -83,3 +83,20 @@
 .slide-item:hover::before {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  .serviceWrapperSection {
+    padding: 1rem 0.1rem 0rem 1rem;
+  }
+  .services-title{
+    padding-top: 1rem;
+  }
+  .aboutWrapper {
+    font-size: clamp(2rem, 3vw, 3.7rem);
+    margin-bottom: 1rem;
+  }
+  .aboutText {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}

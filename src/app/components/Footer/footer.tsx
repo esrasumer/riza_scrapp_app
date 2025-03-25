@@ -33,9 +33,9 @@ const Footer = () => {
       </Head>
 
       <footer>
-        <div className='w-full min-h-screen flex items-center justify-center bg-secondary'>
+        <div className='w-full min-h-screen flex items-center justify-center bg-secondary footerWrapper'>
           <div className='md:w-2/3 w-full px-4 text-white flex flex-col'>
-            <div className='w-full text-7xl font-bold'>
+            <div className='w-full text-7xl font-bold services-text' >
               <h1 className='w-full md:w-2/3'>
                 Size nasıl yardımcı olabiliriz? İletişime geçin
               </h1>
@@ -44,52 +44,51 @@ const Footer = () => {
               <p className='w-full md:w-2/3 text-gray-400'>
                 Hurda geri dönüşümü ile doğayı koruyun, kazancınızı artırın!{' '}
               </p>
-              <div className='w-44 pt-6 md:pt-0'>
-                <Link
+              <div className='w-44 pt-6 md:pt-0 contact-services'>
+                <div
                   className='button'
-                  href='/#contact'
                   onMouseEnter={() => setText('+90 537 026 11 90')}
                   onMouseLeave={() => setText('İletişim')}
                 >
                   {text}
                   <div className='button__horizontal'></div>
                   <div className='button__vertical'></div>
-                </Link>
+                </div>
               </div>
             </div>
             <div className='flex flex-col'>
-              <div className='flex mt-24 mb-12 flex-row justify-between'>
+              <div className='flex mt-24 mb-12 flex-row justify-between footerSection'>
                 <Link
                   href='/#about'
                   aria-label='Hakkımızda sayfasına git'
-                  className='hidden md:block cursor-pointer text-accent hover:text-white uppercase'
+                  className=' md:block cursor-pointer text-accent hover:text-white uppercase'
                 >
                   Hakkımızda
                 </Link>
                 <Link
                   href='/#services'
                   aria-label='Hurdalar ve Hizmetler sayfasına git'
-                  className='hidden md:block cursor-pointer text-accent hover:text-white uppercase'
+                  className='md:block cursor-pointer text-accent hover:text-white uppercase'
                 >
                   Hizmetler
                 </Link>
                 <Link
                   href='/#contact'
                   aria-label='Hurda Fiyatları sayfasına git'
-                  className='hidden md:block cursor-pointer text-accent hover:text-white uppercase'
+                  className='md:block cursor-pointer text-accent hover:text-white uppercase'
                 >
                   Biz Neredeyiz?
                 </Link>
                 <Link
                   href='/#contact'
                   aria-label='İletişim sayfasına git'
-                  className='hidden md:block cursor-pointer text-accent hover:text-white uppercase'
+                  className='md:block cursor-pointer text-accent hover:text-white uppercase'
                 >
                   İletişim
                 </Link>
               </div>
               <hr className='border-gray-600' />
-              <p className='w-full text-center text-accent'>
+              <p className='w-full text-center text-accent '>
                 Copyright © 2025
                 <Link
                   href='https://www.linkedin.com/in/esra-sumer/'

@@ -75,3 +75,27 @@
 .button:hover .button__vertical {
   transform: scaleY(0);
 }
+
+@media (max-width:768px){
+  .footerWrapper{
+    min-height: 50%;
+  }
+
+  .services-text{
+    padding-top: 24px;
+  }
+  .contact-services{
+    width: 22rem;
+    padding: 12%;
+  }
+  .button{
+    padding: 6% 0px;
+  }
+
+    .footerSection {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px; /* Linkler arası boşluk */
+      margin-top:1rem;
+    }
+}
