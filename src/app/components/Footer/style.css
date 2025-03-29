@@ -77,9 +77,9 @@
 }
 
 @media (max-width:768px){
-  .footerWrapper{
+  /* .footerWrapper{
     min-height: 50%;
-  }
+  } */
 
   .services-text{
     padding-top: 24px;

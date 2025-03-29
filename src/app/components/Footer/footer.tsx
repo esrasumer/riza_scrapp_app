@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import './style.css'
 import Link from 'next/link'
+import Image from 'next/image';
 
 const Footer = () => {
   const [text, setText] = useState('İletişim')

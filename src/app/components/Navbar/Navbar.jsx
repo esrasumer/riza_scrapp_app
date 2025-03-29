@@ -14,24 +14,24 @@ function Navbar() {
   const lastScrollY = useRef(0);
 
   // Logo küçültme için scroll efekti
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 70);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 70);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   // Navbar gizleme/gösterme için scroll efekti
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsVisible(currentScrollY <= lastScrollY.current || currentScrollY <= 0);
-      lastScrollY.current = Math.max(currentScrollY, 0);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
+  //     setIsVisible(currentScrollY <= lastScrollY.current || currentScrollY <= 0);
+  //     lastScrollY.current = Math.max(currentScrollY, 0);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   const handleNav = () => setNav(!nav);
 
